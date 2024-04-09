@@ -62,7 +62,7 @@ __DESCRIPTION__
 
 
 # These will be looked for before running
-DEPENDENCIES=(backward.py gmx_mpi)
+DEPENDENCIES=(backward.py gmx)
 
 
 # Get script directory
@@ -289,11 +289,11 @@ __MDP__
 
 
 # Set up for running
-G="gmx_mpi grompp -f $mdp -c $GRO -n $NDX -p $OTP -o $BASE -maxwarn 2"
+G="gmx grompp -f $mdp -c $GRO -n $NDX -p $OTP -o $BASE -maxwarn 2"
 echo $G; $G || exit
 
 # Run
-M="gmx_mpi mdrun -deffnm $BASE -v -ntomp 8"
+M="gmx mdrun -deffnm $BASE -v -ntomp 8"
 echo $M; $M 
 
 # Timing
@@ -320,11 +320,11 @@ sed -e '/^nsteps/s/=.*$/='$NBSTEPS'/' -e '/^ *table-extension/s/^/;/' -e '/^ *en
 mdp=$BASE.mdp
 
 # Set up for running
-G="gmx_mpi grompp -f $mdp -c $GRO -n $NDX -p $OTP -o $BASE -maxwarn 2"
+G="gmx grompp -f $mdp -c $GRO -n $NDX -p $OTP -o $BASE -maxwarn 2"
 echo $G; $G || exit
 
 # Run
-M="gmx_mpi mdrun -deffnm $BASE -v -ntomp 8"
+M="gmx mdrun -deffnm $BASE -v -ntomp 8"
 echo $M; $M 
 
 # Timing
@@ -386,11 +386,11 @@ nstxtcout                = $NSTXTCOUT
 __MDP__
 
   # Set up run
-  G="gmx_mpi grompp -f $mdp -c $GRO -r $BW -p $OTP -o $BASE -maxwarn 2"
+  G="gmx grompp -f $mdp -c $GRO -r $BW -p $OTP -o $BASE -maxwarn 2"
   echo $G; $G || exit
 
   # Perform run
-  M="gmx_mpi mdrun -deffnm $BASE -v -ntomp 8"
+  M="gmx mdrun -deffnm $BASE -v -ntomp 8"
   echo $M; $M 
 
   # Collect timing information
@@ -416,9 +416,9 @@ do
 
   m=${mdp%.mdp}
   tag=$((++i))-md-${m##*/}
-  G="gmx_mpi grompp -f $mdp -c $GRO -r $BW -p $OTP -o $tag -maxwarn 2"
+  G="gmx grompp -f $mdp -c $GRO -r $BW -p $OTP -o $tag -maxwarn 2"
   echo $G; $G || exit
-  M="gmx_mpi mdrun -deffnm $tag -v -ntomp 8"
+  M="gmx mdrun -deffnm $tag -v -ntomp 8"
   echo $M; $M 
   GRO=$tag.gro
 
