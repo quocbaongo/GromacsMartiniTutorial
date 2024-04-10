@@ -104,7 +104,8 @@ if __name__ == "__main__":
 		return json.dumps(clickData)
 
 	# Run app and display result inline in the notebook
-	app.run_server(mode="inline",host='127.0.0.1')
+	hostID=np.random.randint(1,100)
+	app.run_server(mode="inline",host=f'127.0.0.{hostID}')
 
 
 	# Start extracting structure from click
@@ -132,14 +133,14 @@ if __name__ == "__main__":
 
 
 			# Extracting using gromacs
-			p = subprocess.Popen(['gmx_mpi', 'trjconv', 
+			p = subprocess.Popen(['gmx', 'trjconv', 
 						'-f', args.traj, '-s', args.tpr,
 						'-dump', str(indexToTime), '-o', 'frame_' + str(PC1[index]) + '_' + str(PC2[index]) + '_' + str(indexToTime) + '.pdb'],
 					stdin=subprocess.PIPE)		
 			p.communicate(b'1\n')
 			p.wait()
 
-			commands.append('Command just used: ' + 'gmx_mpi trjconv -f ' + args.traj + ' -s '+ args.tpr + ' -dump ' + str(indexToTime) + ' -o frame_' + str(PC1[index]) + '_' + str(PC2[index]) + '_' + str(indexToTime) + '.pdb')		
+			commands.append('Command just used: ' + 'gmx trjconv -f ' + args.traj + ' -s '+ args.tpr + ' -dump ' + str(indexToTime) + ' -o frame_' + str(PC1[index]) + '_' + str(PC2[index]) + '_' + str(indexToTime) + '.pdb')		
 			
 			# Put extracted pdb file in a list
 			PDBOut.append('frame_' + str(PC1[index]) + '_' + str(PC2[index]) + 
