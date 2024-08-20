@@ -12,3 +12,13 @@ conda env create -f env.yml
 
 #The backmapping approach requires python2 environment. The python, bash script and mapping files required for backmapping were obtained from http://cgmartini.nl/index.php/tutorials-general-introduction-gmx5/others-gmx5. 
 
+# Tutorial structure
+Detailed instructions how to execute a coarse-grained molecular dynamics simulations (CGMD) using Martini v3.0 force-field can be found in the file 'MartiniCG_Execution_Analysis.pptx'
+
+Directory 'mdp' contains all the .mdp files that are required for this tutorial. All the files were downloaded and modified where it is necessary from the tutorial provided by Martini developers (http://cgmartini.nl/index.php/2021-martini-online-workshop/tutorials/564-2-proteins-basic-and-martinize-2)
+
+Directory 'CG_with_elasticNetwork' and 'CG_with_NoElasticNetwork' contains the pre-generated topologies and trajectories of the Leptin-LR CRH2 complex simulations with and without the presence of elastic network, respectively.
+
+Directory 'MDAnalysis' contains the python scripts used for trajectory analysis. Invoking 'python3 file_name --help' to access the description of the program and instruction, how to use the program.
+
+Directory 'BackMappedCGtoAT' contains all the required material for transforming the protein structure in coarse-grained resolution to all-atom resolution (check http://www.cgmartini.nl/index.php/tutorials/37-tutorial2/314-tutorial-reverse-mapping for further information).
