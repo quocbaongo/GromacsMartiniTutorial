@@ -6,11 +6,11 @@ In this tutorial, we will use Martini force-field v3.0 (available at http://cgma
 # To create environment for MDAnalysis
 conda env create -f env.yml
 
-#It is important to note that the script in the MDAnalysis directory can only be used for CGMD simulation, and it will not work for ATMD simulation. 
+It is important to note that the script in the MDAnalysis directory can only be used for CGMD simulation, and it will not work for ATMD simulation. 
 
-#The script in MDAnalysis directory requires software and python libraries specified in env.yml script.
+The script in MDAnalysis directory requires software and python libraries specified in env.yml script.
 
-#The backmapping approach requires python2 environment. The python, bash script and mapping files required for backmapping were obtained from http://cgmartini.nl/index.php/tutorials-general-introduction-gmx5/others-gmx5. 
+The backmapping approach requires python2 environment. The python, bash script and mapping files required for backmapping were obtained from http://cgmartini.nl/index.php/tutorials-general-introduction-gmx5/others-gmx5. 
 
 # Tutorial structure
 Detailed instructions how to execute a coarse-grained molecular dynamics simulations (CGMD) using Martini v3.0 force-field can be found in the file 'MartiniCG_Execution_Analysis.pptx'
