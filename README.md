@@ -1,5 +1,7 @@
 # GromacsMartiniTutorial
-This is a tutorial for using martini force field in Gromacs. Martini version is Martini3 and gromacs version is 2020.4. The biological system in this tutorial is a complex of Leptin- Leptin binding domain CRH2. Information about Martini force field can be found in http://cgmartini.nl/index.php 
+This is a tutorial for using martini force field in Gromacs. The available material is used for coarse-grained molecular dynamics simulations workshop in the course "In silico methodologies in biochemistry and molecular medicine" provided by University of Oulu (https://opas.peppi.oulu.fi/fi/opintojakso/747613S/7534?period=2024-2025).
+
+In this tutorial, we will use Martini force-field v3.0 (available at http://cgmartini.nl/index.php/martini-3-0) and Gromacs 2020.4 (available at https://manual.gromacs.org/documentation/2020.4/download.html). The biological system for investigation is a complex of Leptin- Leptin binding domain CRH2.
 
 # To create environment for MDAnalysis
 conda env create -f env.yml
