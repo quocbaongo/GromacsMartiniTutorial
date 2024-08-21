@@ -3,8 +3,8 @@ This is a tutorial for using martini force field in Gromacs. The available mater
 
 In this tutorial, we will use Martini force-field v3.0 (available at http://cgmartini.nl/index.php/martini-3-0) and Gromacs 2020.4 (available at https://manual.gromacs.org/documentation/2020.4/download.html). The biological system for investigation is a complex of Leptin- Leptin binding domain CRH2.
 
-# To create environment for MDAnalysis
-conda env create -f env.yml
+## 1. Simulation environment
+To create the required environment for performing CGMD simulations and their subsequent analyses, use the following command: conda env create -f env.yml
 
 It is important to note that the script in the MDAnalysis directory can only be used for CGMD simulation, and it will not work for ATMD simulation. 
 
@@ -12,7 +12,7 @@ The script in MDAnalysis directory requires software and python libraries specif
 
 The backmapping approach requires python2 environment. The python, bash script and mapping files required for backmapping were obtained from http://cgmartini.nl/index.php/tutorials-general-introduction-gmx5/others-gmx5. 
 
-# Tutorial structure
+## 2. Tutorial structure
 Detailed instructions how to execute a coarse-grained molecular dynamics simulations (CGMD) using Martini v3.0 force-field can be found in the file 'MartiniCG_Execution_Analysis.pptx'
 
 Directory 'mdp' contains all the .mdp files that are required for this tutorial. All the files were downloaded and modified where it is necessary from the tutorial provided by Martini developers (http://cgmartini.nl/index.php/2021-martini-online-workshop/tutorials/564-2-proteins-basic-and-martinize-2)
