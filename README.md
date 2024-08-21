@@ -4,7 +4,7 @@ This is a tutorial for using martini force field in Gromacs. The available mater
 In this tutorial, we will use Martini force-field v3.0 (available at http://cgmartini.nl/index.php/martini-3-0) and Gromacs 2020.4 (available at https://manual.gromacs.org/documentation/2020.4/download.html). The biological system for investigation is a complex of Leptin- Leptin binding domain CRH2.
 
 ## 1. Simulation environment
-To create the required environment for performing CGMD simulations and their subsequent analyses, use the following command: conda env create -f env.yml
+To create the required environment for performing coarse-grained molecular dynamics (CGMD) simulations and their subsequent analyses, use the following command: conda env create -f env.yml
 
 It is important to note that the script in the MDAnalysis directory can only be used for CGMD simulation, and it will not work for ATMD simulation. 
 
