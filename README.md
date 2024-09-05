@@ -22,3 +22,5 @@ Directory 'CG_with_elasticNetwork' and 'CG_with_NoElasticNetwork' contains the p
 Directory 'MDAnalysis' contains the python scripts used for trajectory analysis. Invoking 'python3 file_name --help' to access the description of the program and instruction, how to use the program.
 
 Directory 'BackMappedCGtoAT' contains all the required material for transforming the protein structure in coarse-grained resolution to all-atom resolution (check http://www.cgmartini.nl/index.php/tutorials/37-tutorial2/314-tutorial-reverse-mapping for further information).
+
+Directory 'Student_feedback_2024' includes detailed student feedback for the course in 2024
