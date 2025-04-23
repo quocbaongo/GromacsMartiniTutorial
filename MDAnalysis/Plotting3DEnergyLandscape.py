@@ -1,5 +1,6 @@
 from jupyter_dash import JupyterDash
 import dash
+from dash import Dash
 from dash.dependencies import Input, Output, State
 import numpy as np
 import plotly.express as px
@@ -82,7 +83,7 @@ if __name__ == "__main__":
 	clicked = []
 
 	# Build App
-	app = JupyterDash(__name__)
+	app = Dash(__name__)
 	app.layout = dash.html.Div(
 				[dash.dcc.Graph(id="fig",
 						figure=fig,
@@ -104,8 +105,9 @@ if __name__ == "__main__":
 		return json.dumps(clickData)
 
 	# Run app and display result inline in the notebook
-	hostID=np.random.randint(1,100)
-	app.run_server(mode="inline",host=f'127.0.0.{hostID}')
+	hostID=np.random.randint(1000,10000)
+	#app.run_server(mode="inline",host=f'127.0.0.{hostID}')
+	app.run(debug=True,port=f'{hostID}')
 
 
 	# Start extracting structure from click
@@ -149,12 +151,4 @@ if __name__ == "__main__":
 	print(clicked)
 	print()
 	for i in commands:
-		print(i)	
-
-
-
-
-
-
-
-
+		print(i)
